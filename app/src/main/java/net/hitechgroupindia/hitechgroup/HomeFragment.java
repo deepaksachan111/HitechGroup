@@ -80,6 +80,9 @@ public class HomeFragment extends android.support.v4.app.Fragment {
                     case 2:
                         startActivity(new Intent(getActivity(),ProjectActivity.class));
                         break;
+                    case 3:
+                        startActivity(new Intent(getActivity(),ContactUsActivity.class));
+                        break;
                 }
 
             }
