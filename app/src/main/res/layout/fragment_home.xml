@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_relative"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context="net.hitechgroupindia.hitechgroup.HomeFragment">
+
+
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_above="@+id/relative_bottom"
+        android:id="@+id/contentScroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_homeimg"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp" />
+ <View
+     android:layout_marginTop="10dp"
+     android:background="@android:color/holo_orange_dark"
+     android:layout_width="fill_parent"
+     android:layout_height="3dp"/>
+
+
+
+        <GridView
+            android:layout_marginTop="10dp"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:columnWidth="100dp"
+            android:stretchMode="columnWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="182dp"
+            android:id="@+id/gridview_home_fragment" />
+
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"/>
+    <TextView
+
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="@string/name_text_home"
+        android:id="@+id/tv_home"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+<LinearLayout
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="#6D883E"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+<!--
+        <Button
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            android:background="@drawable/border_button"
+            android:layout_gravity="center"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AboutUs"
+            android:id="@+id/button" />-->
+
+        <TextView
+            android:padding="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:text="@string/name_text_home2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_weight="1"
+        android:src="@drawable/logo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
+</LinearLayout>
+
+</ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relative_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FA5c03"
+            android:gravity="center"
+            android:text="Contact Us"
+            android:id="@+id/btn_contactus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    </RelativeLayout>

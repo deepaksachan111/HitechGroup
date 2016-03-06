@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.hitechgroupindia.hitechgroup.VisionMissionActivity">
+
+    <LinearLayout
+        android:id="@+id/iv_linear_visionandmission"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+  <ImageView
+
+      android:layout_margin="3dp"
+      android:src="@mipmap/back_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+<TextView
+    android:textStyle="bold"
+    android:layout_gravity="center"
+    android:text="VISION AND MISSION"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+      <ImageView
+          android:src="@drawable/visionandmission_imagebg"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content" />
+      <LinearLayout
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="OUR"
+              android:textSize="15dp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="VISION"
+              android:textColor="@android:color/holo_green_light"
+              android:textSize="15dp"
+              android:textStyle="bold" />
+
+      </LinearLayout>
+
+      <ImageView
+          android:layout_gravity="center"
+          android:id="@+id/hr_Image"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="5dp"
+          android:src="@drawable/titleseparator_small" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:text="@string/our_vision" />
+
+
+      <LinearLayout
+          android:layout_marginTop="5dp"
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="OUR "
+              android:textSize="15dp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="MISSION"
+              android:textColor="@android:color/holo_green_light"
+              android:textSize="15dp"
+              android:textStyle="bold" />
+
+      </LinearLayout>
+
+      <ImageView
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="5dp"
+          android:src="@drawable/titleseparator_small" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:text="@string/our_mission" />
+
+
+      <LinearLayout
+          android:layout_marginTop="5dp"
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="CHAIRMAN’S "
+              android:textSize="15dp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="OVERVIEW"
+              android:textColor="@android:color/holo_green_light"
+              android:textSize="15dp"
+              android:textStyle="bold" />
+
+      </LinearLayout>
+
+      <ImageView
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="5dp"
+          android:src="@drawable/titleseparator_small" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:text="@string/Chairmansoverview" />
+
+      <ImageView
+          android:id="@+id/bottom_Image"
+          android:layout_width="wrap_content"
+          android:layout_height="100dp"
+          android:paddingBottom="30dp"
+          android:paddingTop="5dp"
+          android:src="@drawable/about_us_bg" />
+
+  </LinearLayout>
+    </ScrollView>
+</LinearLayout>

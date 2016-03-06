@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">HitechGroup</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_full_screen_image">FullScreenImage</string>
+
+    <string name="name_text_home">HITECH GROUP began its operations from the City of
+        Nawabs- Lucknow, Uttar Pradesh, India. Since then we are carrying out various
+        residential and commercial projects to cater the needs and requirements of people at
+        affordable rates along with excellent quality. The upcoming government projects are going
+        to give a new dimension to the City of Nawabs-Lucknow. Lucknow will be a new blended hub of
+        both culture and technology. This will result in mushrooming various job opportunities at each
+        and every corner of this city thereby welcoming individuals from different regions to fulfill their
+        dreams. Our company is determined to greet each of them with comfortable and affordable environment
+        and providing healthy residential and profitable commercial spaces without compromising with the quality.</string>
+
+    <string name="name_text_home2">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled .</string>
+
+
+    <string name="title_activity_full_screen_image_viewpager">FullScreenImageViewpager</string>
+    <string name="title_activity_full_screen_image_view_pager">FullScreenImageViewPager</string>
+    <string name="title_activity_full_screen_view_pager">FullScreenViewPager</string>
+    <string name="aboutus_text">HITECH GROUP began its operations from the City of Nawabs- Lucknow, Uttar Pradesh,
+        India. Since then we are carrying out various residential and commercial projects to cater the needs and
+        requirements of people at affordable rates along with excellent quality. The upcoming government projects
+        are going to give a new dimension to the City of Nawabs-Lucknow. Lucknow will be a new blended hub of both
+        culture and technology. This will result in mushrooming various job opportunities at each and every corner
+        of this city thereby welcoming individuals from different regions to fulfill their dreams. Our company is
+        determined to greet each of them with comfortable and affordable environment
+        and providing healthy residential and profitable commercial
+        spaces without compromising with the quality.</string>
+    <string name="title_activity_contact_us">ContactUs</string>
+    <string name="title_activity_hitech_farm">HitechFarm</string>
+
+    <string name="Chairmansoverview">Our Basic philosphy is make to significant contribution to the development our contry.
+        we aim to cater the need of each segment of the society.HITECH GROUP is strongly commited towards providing the strong
+    infrastructure.Our Business is based on strong realties and this provide us ease to keep transperency with our clients
+    Providing ehic living, working and shopping enviourment to the people give us delight and satisfaction.Our Group is strongly
+    dedicated towards its corporate social responsibility.Lastly I want to thank all my associates and team members who are working
+    with us fully determination, devotion and commitment.</string>
+
+    <string name="title_activity_vision_mission">VisionMissionActivity</string>
+    <string name="our_vision">Our Vision is not bounded just to the state but to be an international leading Real
+        estate agent, and be the company of first choice amongst our clients to address their needs across all
+        realty verticals. To fulfill growing aspirations of our customers by building world class and environment
+        friendly real estate solutions and redefining the standards of life style by engaging ourselves in
+        the business of Real Estate Development including development of land, constructing and marketing
+        of the same, with an intention of serving the society and community in general
+
+        with the total dedication, commitment, with a focused purpose while maintaining the highest standards of excellence.</string>
+<string name="our_mission">Our Mission is to establish long term healthy relationships with our clients, while
+    offering an exceptionallevel of service and commitment to all their commercial, residential and industrial real estate needs.</string>
+
+    <string name="historyoverview">HITECH GROUP began its operations from the City of Nawabs- Lucknow, Uttar Pradesh,
+        India. Since then we are carrying out various residential and commercial projects to cater the needs and
+        requirements of people at affordable rates along with excellent quality.</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="title_activity_project">ProjectActivity</string>
+</resources>
