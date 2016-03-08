@@ -42,8 +42,7 @@
         </activity>
         <activity
             android:name=".ContactUsActivity"
-            android:theme="@style/CustomActivityTheme"
-          />
+            android:theme="@style/CustomActivityTheme" />
         <activity
             android:name=".HitechFarmActivity"
             android:label="@string/title_activity_hitech_farm" >
@@ -63,7 +62,12 @@
         </activity>
         <activity
             android:name=".ProjectActivity"
-            android:theme="@style/CustomActivityTheme">
+            android:theme="@style/CustomActivityTheme" >
+        </activity>
+        <activity
+            android:theme="@style/CustomActivityTheme"
+            android:name=".Loginctivity"
+            android:label="@string/title_activity_login" >
         </activity>
     </application>
 
