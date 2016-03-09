@@ -20,8 +20,8 @@
     <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#FA5c03</item>
-        <item name="colorPrimaryDark">#FA5c03</item>
+        <item name="colorPrimary">@color/themecolor</item>
+        <item name="colorPrimaryDark">@color/themecolorprimary</item>
         <item name="colorAccent">#F5F7FF</item>
     </style>
 
@@ -41,14 +41,17 @@
         <item name="android:windowActionBarOverlay">true</item>
         <item name="actionBarSize">30sp</item>
 
+        <item name="colorPrimary">@color/themecolor</item>
+        <item name="colorPrimaryDark">@color/themecolorprimary</item>
+
         <!-- other activity and action bar styles here -->
     </style>
 
     <!-- style for the action bar backgrounds -->
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@android:color/holo_orange_dark</item>
-        <item name="background">@android:color/holo_orange_dark</item>
+
+        <item name="background">@color/themecolorprimary</item>
         <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
         <item name="android:subtitleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
         <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>

@@ -126,7 +126,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="16dp"
-        android:background="#FA5c03"
+        android:background="@color/themecolor"
         android:gravity="center"
         android:text="Vission and Mission"
         android:layout_width="match_parent"

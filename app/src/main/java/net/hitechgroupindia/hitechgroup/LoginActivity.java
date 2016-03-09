@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Loginctivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     EditText editTextTo,editTextSubject,editTextMessage;
     Button send;
     @Override
@@ -15,6 +15,11 @@ public class Loginctivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
          getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if(savedInstanceState == null){
+
+            getSupportFragmentManager().beginTransaction().add(R.id.container_login,new LoginFragment()).commit();
+        }
     }
 
 

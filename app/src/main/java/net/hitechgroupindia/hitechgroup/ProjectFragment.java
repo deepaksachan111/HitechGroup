@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import net.hitechgroupindia.hitechgroup.Adapter.CustomGridAdapterProjectFragment;
 import net.hitechgroupindia.hitechgroup.Adapter.ProjectImageAdapter;
 
 
@@ -30,7 +31,11 @@ public class ProjectFragment extends android.support.v4.app.Fragment {
         GridView gridView = (GridView)view. findViewById(R.id.grid_view);
 
         // Instance of ImageAdapter Class
-        gridView.setAdapter(new ProjectImageAdapter(getActivity()));
+        int image[] = new int[]{R.drawable.gallery8,R.drawable.six};
+
+        final String text[] ={"HITECH FARM","HITECH GHARAUNDA"};
+
+        gridView.setAdapter(new CustomGridAdapterProjectFragment(getActivity(),text,image));
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -38,7 +43,7 @@ public class ProjectFragment extends android.support.v4.app.Fragment {
                                     int position, long id) {
 
                 // Sending image id to FullScreenActivity
-                if (position == 1) {
+                if (position == 0) {
                     Intent i = new Intent(getActivity(), HitechFarmActivity.class);
                     startActivity(i);
                 } else {

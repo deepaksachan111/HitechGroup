@@ -1,6 +1,7 @@
 package net.hitechgroupindia.hitechgroup.Adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,8 +50,12 @@ public class CustomGridAdapterHomeFragment extends BaseAdapter{
 	        if (convertView == null) {  
 	        	
 	        	grid = new View(mContext);
-				grid = inflater.inflate(R.layout.gridview_image_text, null);
+				grid = inflater.inflate(R.layout.gridview_image_text_home_adapter, null);
 	        	TextView textView = (TextView) grid.findViewById(R.id.grid_text);
+
+			Typeface type = Typeface.createFromAsset(mContext.getAssets(), "exo_semi_bold.otf");
+				textView.setTypeface(type);
+
 	        	ImageView imageView = (ImageView)grid.findViewById(R.id.grid_image);
 	        	textView.setText(web[position]);
 	        	imageView.setImageResource(Imageid[position]);

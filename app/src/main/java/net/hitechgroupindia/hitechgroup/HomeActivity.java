@@ -52,6 +52,13 @@ public class HomeActivity extends AppCompatActivity {
             TextView tabTextView = (TextView) relativeLayout.findViewById(R.id.tab_title);
             ImageView imageView = (ImageView) relativeLayout.findViewById(R.id.iv_tab);
 
+           /*   String name = "Gallery";
+            if(tab.getText().equals(name)){
+                tabTextView.setText("Login");
+            }else{
+                tabTextView.setText(tab.getText());
+            }*/
+
             tabTextView.setText(tab.getText());
             imageView.setImageResource(tabIcons[i]);
             tab.setCustomView(relativeLayout);
@@ -78,7 +85,7 @@ public class HomeActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), "Home");
         adapter.addFrag(new AboutFragment(), "AboutUs");
-        adapter.addFrag(new GallaryFragment(), "Gallery");
+        adapter.addFrag(new LoginFragment(), "Login");
         viewPager.setAdapter(adapter);
     }
 

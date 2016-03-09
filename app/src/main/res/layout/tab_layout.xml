@@ -18,6 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     <TextView
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         android:text="hello"
         android:id="@+id/tab_title"
         android:layout_width="wrap_content"

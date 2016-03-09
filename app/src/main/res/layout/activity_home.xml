@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@android:color/white"
-            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorHeight="5dp"
             app:tabPaddingEnd="0dp"
             app:tabPaddingStart="0dp" />
 
