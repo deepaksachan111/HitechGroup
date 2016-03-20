@@ -1,6 +1,7 @@
 package net.hitechgroupindia.hitechgroup;
 
-import android.graphics.Typeface;
+import android.app.Activity;
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,23 +12,31 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import net.hitechgroupindia.hitechgroup.Fragment.AboutFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.HomeFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.LoginFragment;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
-
-   // private Toolbar toolbar;
-   // private TabLayout tabLayout;
+    String  login_name;
+    // private Toolbar toolbar;
+    // private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.mipmap.home,
-            R.mipmap.ic_tab_contacts,R.mipmap.gallery
+            R.mipmap.ic_tab_contacts, R.mipmap.key
 
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +44,22 @@ public class HomeActivity extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        setupViewPager(viewPager);
 
+
+       SessionManager sessionManager = new SessionManager(this);
+         HashMap<String, String> map = sessionManager.getUserDetails();
+        login_name  = map.get(SessionManager.KEY_EMAIL);
        /* TextView textView = (TextView)findViewById(R.id.tv_hometext);
         Typeface type = Typeface.createFromAsset(getAssets(), "regular.ttf");
         textView.setTypeface(type);*/
-
+        if(login_name != null){
+            setupViewPager2(viewPager);
+        }else {
+            setupViewPager(viewPager);
+        }
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
+
 
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
@@ -52,23 +69,24 @@ public class HomeActivity extends AppCompatActivity {
             TextView tabTextView = (TextView) relativeLayout.findViewById(R.id.tab_title);
             ImageView imageView = (ImageView) relativeLayout.findViewById(R.id.iv_tab);
 
-           /*   String name = "Gallery";
-            if(tab.getText().equals(name)){
-                tabTextView.setText("Login");
+              String names = "Login";
+            if(tab.getText().equals(names)&&login_name != null){
+                tabTextView.setText(login_name);
             }else{
                 tabTextView.setText(tab.getText());
-            }*/
+            }
 
-            tabTextView.setText(tab.getText());
+           // tabTextView.setText(tab.getText());
             imageView.setImageResource(tabIcons[i]);
             tab.setCustomView(relativeLayout);
 
 
-           // setupTabIcons();
-           // tab.select();
+            // setupTabIcons();
+             tab.select();
         }
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -76,16 +94,26 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 
-  /*  private void setupTabIcons() {
-        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
-        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
-        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
-    }*/
+    /*  private void setupTabIcons() {
+          tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+          tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+          tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+      }*/
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), "Home");
         adapter.addFrag(new AboutFragment(), "AboutUs");
         adapter.addFrag(new LoginFragment(), "Login");
+
+        viewPager.setAdapter(adapter);
+    }
+
+    private void setupViewPager2(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFrag(new HomeFragment(), "Home");
+        adapter.addFrag(new AboutFragment(), "AboutUs");
+        adapter.addFrag(new DashboardFragment(), "Login");
+
         viewPager.setAdapter(adapter);
     }
 
@@ -119,7 +147,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -133,9 +160,27 @@ public class HomeActivity extends AppCompatActivity {
         }
         if (id == android.R.id.home) {
 
-           // startActivity(new Intent(this,HomeActivity.class));
+            // startActivity(new Intent(this,HomeActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public static void hideKeyboard(Context ctx) {
+        InputMethodManager inputManager = (InputMethodManager) ctx
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        // check if no view has focus:
+        View v = ((Activity) ctx).getCurrentFocus();
+        if (v == null)
+            return;
+
+        inputManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        hideKeyboard(this);
     }
 }

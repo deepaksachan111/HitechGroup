@@ -1,11 +1,14 @@
 package net.hitechgroupindia.hitechgroup;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
     EditText editTextTo,editTextSubject,editTextMessage;
@@ -14,11 +17,16 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(savedInstanceState == null){
+        SessionManager sessionManager = new SessionManager(this);
+        HashMap<String, String> map = sessionManager.getUserDetails();
+        String loginname = map.get(SessionManager.KEY_EMAIL);
+        if(loginname == null){
 
             getSupportFragmentManager().beginTransaction().add(R.id.container_login,new LoginFragment()).commit();
+        }else{
+            startActivity(new Intent(this,NavigationDrawerActivity.class));
         }
     }
 

@@ -9,7 +9,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_full_screen_image">FullScreenImage</string>
 
-    <string name="name_text_home">HITECH GROUP began its operations from the City of
+    <string name="text_aboutus_homefragment">HITECH GROUP began its operations from the City of
         Nawabs- Lucknow, Uttar Pradesh, India. Since then we are carrying out various
         residential and commercial projects to cater the needs and requirements of people at
         affordable rates along with excellent quality. The upcoming government projects are going
@@ -19,7 +19,7 @@
         dreams. Our company is determined to greet each of them with comfortable and affordable environment
         and providing healthy residential and profitable commercial spaces without compromising with the quality.</string>
 
-    <string name="name_text_home2">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled .</string>
+    <string name="text_aboutus_homefragment2">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled .</string>
 
 
     <string name="title_activity_full_screen_image_viewpager">FullScreenImageViewpager</string>
@@ -67,13 +67,13 @@
 
 
 
-    <string name="hello">
+    <string name="text_aboutus_homefragment_linear">
 <![CDATA[
 <html>
  <head></head>
  <body style="text-align:justify;color:gray;background-color:white;">
 
-HITECH GROUP began its operations from the City of
+        HITECH GROUP began its operations from the City of
         Nawabs- Lucknow, Uttar Pradesh, India. Since then we are carrying out various
         residential and commercial projects to cater the needs and requirements of people at
         affordable rates along with excellent quality. The upcoming government projects are going
@@ -84,11 +84,46 @@ HITECH GROUP began its operations from the City of
         and providing healthy residential and profitable commercial spaces without compromising with the quality.</string>
 
 
-
  </body>
 </html>
 ]]>
 </string>
+
+
+    <string name="text_aboutus_homefragment2_linear">
+<![CDATA[
+<html>
+ <head></head>
+ <body style="text-align:justify;color:white;background-color:#6d883e;">
+<font size="2">
+       On the other hand, we denounce with righteous indignation and dislike men who are so beguiled.
+
+</font>
+ </body>
+</html>
+]]>
+
+
+
+</string>
+
+    <string name="navigation_item_1">Home</string>
+    <string name="navigation_item_2">Events</string>
+    <string name="starred_string">Starred</string>
+
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="team">Team</string>
+    <string name="business">Business</string>
+    <string name="income">Income</string>
+    <string name="epins">ePins</string>
+    <string name="rewards">Rewards</string>
+
+    <string name="closeDrawer">Dashboard</string>
+    <string name="openDrawer">Navigation View Closed</string>
+
+
+
 
 
 

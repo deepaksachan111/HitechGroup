@@ -5,6 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:isScrollContainer="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
 
     <android.support.v7.widget.CardView
@@ -115,7 +125,6 @@
 
 
 
-
     <android.support.v7.widget.CardView
         android:id="@+id/card_view2"
         android:layout_gravity="center"
@@ -133,31 +142,40 @@
 
 
             <EditText
+                android:id="@+id/edt_login_name"
+                android:maxLines="1"
+                android:ems="1"
+                android:maxLength="20"
+                android:imeOptions="actionNext"
                 android:padding="5dp"
-                android:background="@drawable/editborder"
+                android:background="@drawable/edit_border_grid"
                 android:hint="Login ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
 
             <EditText
+                android:id="@+id/edt_login_password"
+                android:inputType="textWebPassword"
+                android:imeOptions="actionDone"
                 android:layout_marginTop="20dp"
                 android:padding="5dp"
-                android:background="@drawable/editborder"
+                android:background="@drawable/edit_border_grid"
                 android:hint="Password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
 
             <Button
+                android:textSize="20dp"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:background="@android:color/holo_blue_light"
                 android:layout_marginTop="20dp"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:text="Login"
-                android:id="@+id/button" />
+                android:id="@+id/btn_login" />
 
 
 
@@ -175,6 +193,13 @@
 
     </android.support.v7.widget.CardView>
 
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
     <android.support.v7.widget.CardView
         android:id="@+id/card_view3"
         android:layout_gravity="center"
@@ -187,10 +212,7 @@
     </android.support.v7.widget.CardView>
 
 
-    <Button
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>
 

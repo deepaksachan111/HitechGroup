@@ -5,22 +5,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-feature
-        android:name="android.hardware.touchscreen"
-        android:required="false" />
-    <uses-feature
-        android:name="android.software.leanback"
-        android:required="true" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/hitechlogo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".Activity.SplashScreenActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:theme="@style/AppFullScreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,47 +23,54 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/MyMaterialTheme" >
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
-            android:theme="@style/CustomActivityTheme"
-            android:name=".FullScreenImage"
-            android:label="@string/title_activity_full_screen_image" >
+            android:name=".Activity.FullScreenImage"
+            android:label="@string/title_activity_full_screen_image"
+            android:theme="@style/CustomActivityTheme" >
         </activity>
         <activity
-            android:theme="@style/CustomActivityTheme"
-            android:name=".FullScreenViewPager"
-            android:label="@string/title_activity_full_screen_view_pager" >
+            android:name=".Activity.FullScreenViewPager"
+            android:label="@string/title_activity_full_screen_view_pager"
+            android:theme="@style/CustomActivityTheme" >
         </activity>
         <activity
-            android:name=".ContactUsActivity"
+            android:name=".Activity.ContactUsActivity"
             android:theme="@style/CustomActivityTheme" />
         <activity
-            android:theme="@style/CustomActivityTheme"
-            android:name=".HitechFarmActivity"
-            android:label="@string/title_activity_hitech_farm" >
+            android:name=".Activity.HitechFarmActivity"
+            android:label="@string/title_activity_hitech_farm"
+            android:theme="@style/CustomActivityTheme" >
         </activity>
         <activity
-            android:name=".VisionMissionActivity"
+            android:name=".Activity.VisionMissionActivity"
             android:label="@string/title_activity_vision_mission"
             android:theme="@style/MyMaterialTheme" >
         </activity>
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".Activity.AboutUsActivity"
             android:theme="@style/CustomActivityTheme" >
         </activity>
         <activity
-            android:name=".GalleryActivity"
+            android:name=".Activity.GalleryActivity"
             android:theme="@style/CustomActivityTheme" >
         </activity>
         <activity
-            android:name=".ProjectActivity"
+            android:name=".Activity.ProjectActivity"
             android:theme="@style/CustomActivityTheme" >
         </activity>
         <activity
-            android:theme="@style/CustomActivityTheme"
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <activity
+            android:name=".NavigationDrawerActivity"
+            android:theme="@style/navigation_actionbar">
         </activity>
     </application>
 
