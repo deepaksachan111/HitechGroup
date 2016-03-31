@@ -120,7 +120,7 @@ public class SessionManager {
 		editor.commit();
 		
 		// After logout redirect user to Loing Activity
-		Intent i = new Intent(_context, SplashScreenActivity.class);
+		Intent i = new Intent(_context, HomeActivity.class);
 		// Closing all the Activities
 		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 

@@ -8,12 +8,18 @@
     android:background="@drawable/edit_border_grid"
     android:padding="5dp" >
 
+<LinearLayout
+    android:gravity="center"
+    android:background="#E0E0E0"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ImageView
         android:layout_margin="7dp"
         android:id="@+id/grid_image"
         android:layout_width="30dp"
         android:layout_height="30dp">
-    </ImageView>
+    </ImageView>.
 
     <TextView
         android:layout_margin="7dp"
@@ -25,5 +31,7 @@
         android:layout_marginTop="10dp"
         android:textSize="16sp" >
     </TextView>
+
+</LinearLayout>
 
 </LinearLayout>

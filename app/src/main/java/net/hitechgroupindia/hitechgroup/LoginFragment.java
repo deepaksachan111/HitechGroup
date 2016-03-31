@@ -35,7 +35,7 @@ private  Button btn_login,btn_logout;
         edt_login_name =(EditText) view.findViewById(R.id.edt_login_name);
          login_pass   =(EditText) view.findViewById(R.id.edt_login_password);
          btn_login =(Button)view.findViewById(R.id.btn_login);
-         btn_logout =(Button)view.findViewById(R.id.btn_logout);
+         btn_logout =(Button)view.findViewById(R.id.btn_logoutss);
 
         sessionManager = new SessionManager(getActivity());
         HashMap<String, String> map = sessionManager.getUserDetails();
@@ -50,14 +50,16 @@ private  Button btn_login,btn_logout;
                 }
             }
         });
-
+/*
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sessionManager.logoutUser();
-                getActivity().finish();
+               // sessionManager.logoutUser();
+
+               // startActivity(new Intent(getActivity(), HomeActivity.class));
+               // getActivity().finish();
             }
-        });
+        });*/
         return view;
     }
 

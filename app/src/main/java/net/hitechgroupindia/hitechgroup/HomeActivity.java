@@ -21,12 +21,16 @@ import android.widget.TextView;
 import net.hitechgroupindia.hitechgroup.Fragment.AboutFragment;
 import net.hitechgroupindia.hitechgroup.Fragment.HomeFragment;
 import net.hitechgroupindia.hitechgroup.Fragment.LoginFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.LoginWebView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
+    SessionManager sessionManager ;
+    NetworkConnectionChecker  connectionchecker = new NetworkConnectionChecker(this);
+  private   boolean isInternetPresent;
     String  login_name;
     // private Toolbar toolbar;
     // private TabLayout tabLayout;
@@ -52,9 +56,15 @@ public class HomeActivity extends AppCompatActivity {
        /* TextView textView = (TextView)findViewById(R.id.tv_hometext);
         Typeface type = Typeface.createFromAsset(getAssets(), "regular.ttf");
         textView.setTypeface(type);*/
-        if(login_name != null){
+
+
+       isInternetPresent = connectionchecker.isConnectingToInternet();
+      //sessionManager.logoutUser();
+        if(login_name != null && isInternetPresent ){
             setupViewPager2(viewPager);
+
         }else {
+            //sessionManager.logoutUser();
             setupViewPager(viewPager);
         }
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
@@ -71,7 +81,8 @@ public class HomeActivity extends AppCompatActivity {
 
               String names = "Login";
             if(tab.getText().equals(names)&&login_name != null){
-                tabTextView.setText(login_name);
+                tabTextView.setText("You");
+                tab.select();
             }else{
                 tabTextView.setText(tab.getText());
             }
@@ -82,7 +93,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
             // setupTabIcons();
-             tab.select();
+            // tab.select();
         }
 
     }
@@ -103,16 +114,17 @@ public class HomeActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), "Home");
         adapter.addFrag(new AboutFragment(), "AboutUs");
-        adapter.addFrag(new LoginFragment(), "Login");
+        adapter.addFrag(new LoginWebView(), "Login");
+
 
         viewPager.setAdapter(adapter);
     }
 
-    private void setupViewPager2(ViewPager viewPager) {
+    public void setupViewPager2(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), "Home");
         adapter.addFrag(new AboutFragment(), "AboutUs");
-        adapter.addFrag(new DashboardFragment(), "Login");
+        adapter.addFrag(new LoginWebView(), "Login");
 
         viewPager.setAdapter(adapter);
     }
@@ -138,6 +150,8 @@ public class HomeActivity extends AppCompatActivity {
         public void addFrag(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
+
+
         }
 
         @Override
@@ -182,5 +196,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         hideKeyboard(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
     }
 }

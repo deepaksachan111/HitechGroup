@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="net.hitechgroupindia.hitechgroup.Extrafragment">
+
+
+   <LinearLayout
+       android:layout_marginTop="10dp"
+       android:layout_gravity="center"
+       android:orientation="horizontal"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:id="@+id/linear_dashboard"
+           android:layout_weight="1"
+           android:layout_gravity="center"
+           android:orientation="vertical"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+       <ImageView
+           android:layout_gravity="center"
+           android:src="@mipmap/profile_big"
+           android:layout_width="75dp"
+           android:layout_height="75dp" />
+
+           <TextView
+               android:layout_gravity="center"
+               android:text="Dashboard"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+           </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_weight="1"
+           android:layout_gravity="center"
+           android:orientation="vertical"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:layout_gravity="center"
+               android:src="@mipmap/picture_big"
+               android:layout_width="75dp"
+               android:layout_height="75dp" />
+
+           <TextView
+               android:layout_gravity="center"
+               android:text="Profile"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+       </LinearLayout>
+   </LinearLayout>
+
+    <!--second row.............................-->
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/team_big"
+                android:layout_width="75dp"
+                android:layout_height="75dp" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="Team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/epin_big"
+                android:layout_width="75dp"
+                android:layout_height="75dp" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="Business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+  <!--  third row ...............................-->
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/statics_big"
+                android:layout_width="75dp"
+                android:layout_height="75dp" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="Income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/brifcase_big"
+                android:layout_width="75dp"
+                android:layout_height="75dp" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="epins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/reward_big"
+            android:layout_width="75dp"
+            android:layout_height="75dp" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="Rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -24,7 +24,7 @@ public class DashboardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_dashboard, container, false);
-       Button button =(Button)v.findViewById(R.id.btn_logout);
+       Button button =(Button)v.findViewById(R.id.btn_logoutss);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
