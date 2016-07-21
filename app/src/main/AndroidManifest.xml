@@ -69,7 +69,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppFullScreenTheme"
+            android:theme="@style/MyMaterialTheme.Base"
             android:windowSoftInputMode="adjustResize" >
         </activity>
 

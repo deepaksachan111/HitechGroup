@@ -8,6 +8,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
+import net.hitechgroupindia.hitechgroup.Fragment.LoginFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.LoginWebView;
+
 import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
@@ -26,7 +29,9 @@ public class LoginActivity extends AppCompatActivity {
 
             getSupportFragmentManager().beginTransaction().add(R.id.container_login,new LoginFragment()).commit();
         }else{
-            startActivity(new Intent(this,NavigationDrawerActivity.class));
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_login, new LoginWebView()).commit();
+           // startActivity(new Intent(this,NavigationDrawerActivity.class));
         }
     }
 

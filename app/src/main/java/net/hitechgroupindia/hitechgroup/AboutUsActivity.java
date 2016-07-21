@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import net.hitechgroupindia.hitechgroup.Fragment.AboutFragment;
+
 public class AboutUsActivity extends AppCompatActivity {
 
     @Override

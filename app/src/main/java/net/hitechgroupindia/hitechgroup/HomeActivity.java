@@ -57,10 +57,7 @@ public class HomeActivity extends AppCompatActivity {
         Typeface type = Typeface.createFromAsset(getAssets(), "regular.ttf");
         textView.setTypeface(type);*/
 
-
-       isInternetPresent = connectionchecker.isConnectingToInternet();
-      //sessionManager.logoutUser();
-        if(login_name != null && isInternetPresent ){
+        if(login_name != null  ){
             setupViewPager2(viewPager);
 
         }else {
@@ -81,7 +78,7 @@ public class HomeActivity extends AppCompatActivity {
 
               String names = "Login";
             if(tab.getText().equals(names)&&login_name != null){
-                tabTextView.setText("You");
+                tabTextView.setText(login_name);
                 tab.select();
             }else{
                 tabTextView.setText(tab.getText());
@@ -94,6 +91,7 @@ public class HomeActivity extends AppCompatActivity {
 
             // setupTabIcons();
             // tab.select();
+
         }
 
     }
@@ -116,7 +114,6 @@ public class HomeActivity extends AppCompatActivity {
         adapter.addFrag(new AboutFragment(), "AboutUs");
         adapter.addFrag(new LoginWebView(), "Login");
 
-
         viewPager.setAdapter(adapter);
     }
 
@@ -124,7 +121,7 @@ public class HomeActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), "Home");
         adapter.addFrag(new AboutFragment(), "AboutUs");
-        adapter.addFrag(new LoginWebView(), "Login");
+        adapter.addFrag(new LoginWebView(), "User");
 
         viewPager.setAdapter(adapter);
     }

@@ -3,6 +3,7 @@ package net.hitechgroupindia.hitechgroup.Fragment;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import net.hitechgroupindia.hitechgroup.HomeActivity;
 import net.hitechgroupindia.hitechgroup.NetworkConnectionChecker;
 import net.hitechgroupindia.hitechgroup.R;
 import net.hitechgroupindia.hitechgroup.SessionManager;
@@ -24,7 +26,7 @@ public class LoginWebView extends Fragment {
 
     private WebView webView;
     private LinearLayout linear_nointernet;
-  SessionManager sessionManager ;
+    SessionManager sessionManager ;
     public LoginWebView() {
         // Required empty public constructor
     }
@@ -32,6 +34,7 @@ public class LoginWebView extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
 
@@ -43,17 +46,19 @@ public class LoginWebView extends Fragment {
 
         webView = (WebView)v. findViewById(R.id.webView1);
         linear_nointernet =(LinearLayout)v.findViewById(R.id.linear_nointernet);
+
         NetworkConnectionChecker  connectionchecker = new NetworkConnectionChecker(getActivity());
        boolean isInternetPresent = connectionchecker.isConnectingToInternet();
 
         if (isInternetPresent) {
 
           SessionManager  sessionManager = new SessionManager(getActivity());
-            sessionManager.createLoginemail("You");
-
+            sessionManager.createLoginemail("Deepak");
+          //  startActivity(new Intent(getActivity(), HomeActivity.class));
             startWebView("http://hitechgroupindia.net/default.aspx");
 
-        }else
+        }
+        else
         {
             new AlertDialog.Builder(getActivity())
                     .setTitle("Connection Failed !")
@@ -131,7 +136,7 @@ public class LoginWebView extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-       sessionManager = new SessionManager(getActivity());
-        sessionManager.logoutUser();
+     /*  sessionManager = new SessionManager(getActivity());
+        sessionManager.logoutUser();*/
     }
 }

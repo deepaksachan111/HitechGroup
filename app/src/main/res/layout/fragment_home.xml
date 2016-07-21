@@ -23,12 +23,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_homeimg"
         android:layout_width="fill_parent"
-        android:layout_height="10dp" />
+        android:layout_height="wrap_content" />
 
 
+            <TextView
+
+                android:id="@+id/tv_animation"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+</FrameLayout>
         <GridView
            android:listSelector="@drawable/gridview_item_highlited"
             android:drawSelectorOnTop="true"
