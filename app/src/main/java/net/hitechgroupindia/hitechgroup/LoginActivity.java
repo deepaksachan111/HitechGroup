@@ -1,14 +1,11 @@
 package net.hitechgroupindia.hitechgroup;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
-import net.hitechgroupindia.hitechgroup.Fragment.LoginFragment;
 import net.hitechgroupindia.hitechgroup.Fragment.LoginWebView;
 
 import java.util.HashMap;
