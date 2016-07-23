@@ -1,12 +1,20 @@
 package net.hitechgroupindia.hitechgroup;
 
+import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.LinearLayout;
+
+import net.hitechgroupindia.hitechgroup.Adapter.CustomGridAdapterHomeFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.*;
 
 
 public class Extrafragment extends Fragment {
@@ -31,7 +39,7 @@ public class Extrafragment extends Fragment {
        linear_dashbord.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               getFragmentManager().beginTransaction().replace(R.id.viewpager, new ProjectFragment()).commit();
+               getFragmentManager().beginTransaction().replace(R.id.viewpager, new net.hitechgroupindia.hitechgroup.Fragment.ProjectFragment()).commit();
            }
        });
         //getSupportFragmentManager().beginTransaction().replace(R.id.viewpager, new ProjectFragment()).commit();

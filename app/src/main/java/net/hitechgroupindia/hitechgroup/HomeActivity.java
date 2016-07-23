@@ -18,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import net.hitechgroupindia.hitechgroup.Fragment.AboutFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.HomeFragment;
+import net.hitechgroupindia.hitechgroup.Fragment.LoginFragment;
 import net.hitechgroupindia.hitechgroup.Fragment.LoginWebView;
 
 import java.util.ArrayList;
