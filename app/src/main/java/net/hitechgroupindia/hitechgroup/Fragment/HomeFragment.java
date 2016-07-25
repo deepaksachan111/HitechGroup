@@ -23,7 +23,6 @@ import net.hitechgroupindia.hitechgroup.Activity.GalleryActivity;
 import net.hitechgroupindia.hitechgroup.Activity.ProjectActivity;
 import net.hitechgroupindia.hitechgroup.Adapter.CustomGridAdapterHomeFragment;
 import net.hitechgroupindia.hitechgroup.LoginActivity;
-import net.hitechgroupindia.hitechgroup.Myclass;
 import net.hitechgroupindia.hitechgroup.R;
 import net.hitechgroupindia.hitechgroup.SessionManager;
 
