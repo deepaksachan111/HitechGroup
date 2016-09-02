@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -58,7 +60,10 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         textView = (TextView)view.findViewById(R.id.tv_animation);
       showAnimationImage();
 
-        Myclass.hello();
+        final Animation a = AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_out_right);
+        a.reset();
+
+
         final Handler tipsHanlder = new Handler();
 
         tipsHanlder.post(new Runnable() {
@@ -67,6 +72,7 @@ public class HomeFragment extends android.support.v4.app.Fragment {
                 //set number of tip(randon/another way)
 
                     textView.setText(text[tipPosition]);
+                textView.startAnimation(a);
                     textView.setBackgroundColor(getResources().getColor(colours[tipPosition]));
                     tipPosition++;
                     if(tipPosition==6){
